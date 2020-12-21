@@ -1,0 +1,145 @@
+html,body {
+    position:relative; 
+    margin:0;
+    padding:0;
+    overflow:auto; 
+}
+
+.text-decorate {
+  text-align: center;
+}
+
+.navbar{
+  background: #f2f2f2;
+}
+
+.navbar-brand{
+  color: black;
+  font-size: 40px;
+}
+
+hr{
+  margin-top: 0%;
+  width: 50%;
+}
+
+.filters{
+  font-size: 28px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.display-flex {
+  display: flex;
+  width: 100%;
+}
+
+.pad10 {
+  padding: 10px;
+}
+
+.pad0 {
+  padding: 0%;
+}
+
+.center-align {
+  text-align: center;
+}
+
+.white-back {
+  background: white;
+  margin-left: 20px;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+
+.grey-back {
+  background: #f2f2f2;
+  padding-bottom: 40px;
+}
+
+.round {
+  border-radius: 10px;
+}
+
+.margin10 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.blue-heading {
+  color: blue
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.custom-jumbotron {
+  padding: 0px;
+  margin: 0px;
+}
+
+.button {
+  background-color: #C5E09A;
+  border: none;
+  color: black;
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 8px 6px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.button.active {
+    background-color: #7CBA00;
+    outline: none;
+}
+
+app-custom-image {
+  min-height: 200px;
+}
+
+.footer { 
+    position: relative; 
+    width: 100%;
+    bottom: 0;
+    color: black;
+    background-color: #f2f2f2;
+    font-size: 36px; 
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+@media only screen and (min-width: 700px) {
+  .media-width {
+    width: 30%
+  }
+
+  .media-display {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .media-width-filter {
+    width: 30%
+  }
+
+  .media-display {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .media-width-filter {
+    width: 20%
+  }
+
+  .media-display {
+    display: flex;
+  }
+}

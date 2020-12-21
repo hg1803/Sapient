@@ -1,0 +1,70 @@
+<nav class="navbar navbar-expand-lg">
+  <a class="navbar-brand"> SpacEx Launch Programs</a>
+</nav>
+<div class="custom-jumbotron jumbotron">
+  <div class='grey-back media-display'>
+    <div class="media-width-filter">
+      <div class="pad10 white-back margin10" style="margin-left: 10px;">
+        <p class="filters"><strong>Filters</strong></p>
+        <p class='text-decorate filters'>Launch Year</p>
+        <hr>
+        <div class="center-align row">
+          <div *ngFor="let item of year;let i = index" class='col-6'>
+            <label class="button" (click)="clickedYear(i)"
+              [ngClass]="{'active': year[i] == isYearClicked}">{{item}}</label>
+          </div>
+        </div>
+        <p class='text-decorate filters'>Successful Launch</p>
+        <hr>
+        <div class="center-align row">
+          <div class='col-6' (click)="clickedLaunch(true)">
+            <label class="button" [ngClass]="{'active':isLaunchClicked==true}">TRUE</label>
+          </div>
+          <div class='col-6' (click)="clickedLaunch(false)">
+            <label class="button" [ngClass]="{'active':isLaunchClicked==false}">FALSE</label>
+          </div>
+        </div>
+        <p class='text-decorate filters'>Successful Landing</p>
+        <hr>
+        <div class="center-align row">
+          <div class='col-6' (click)="clickedLanding(true)">
+            <label class="button" [ngClass]="{'active':isLandingClicked==true}">TRUE</label>
+          </div>
+          <div class='col-6' (click)="clickedLanding(false)">
+            <label class="button" [ngClass]="{'active':isLandingClicked==false}">FALSE</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="container">
+        <div class="row">
+          <div *ngFor="let item of spaceData" class='margin10 col-sm-12 col-md-6 col-lg-3 col-xl-3 d-flex'>
+            <div class="pad10 round card">
+              <app-custom-image>
+                <img *ngIf [src]="item.mission_patch_small==null? 'assets/no-image.jpg':item.mission_patch_small"
+                  class='pad10 grey-back card-img-top' [alt]="item.mission_name">
+              </app-custom-image>
+              <div class="card-body" style="padding:0px">
+                <p class="blue-heading bold-text card-title">{{item.mission_name}}
+                  #{{item.flight_number}}</p>
+                <p class="card-text"><b>Mission Ids: </b></p>
+                <ul>
+                  <li class='blue-heading' *ngFor='let id of item.mission_id'>{{id}}</li>
+                </ul>
+                <p class="bold-text card-text">Launch Year: <span class="blue-heading">{{item.launch_year}}</span></p>
+                <p class="bold-text card-text">Successful Launch: <span
+                    class="blue-heading">{{item.launch_success}}</span></p>
+                <p class="bold-text card-text">Landing Success: <span class="blue-heading">{{item.land_success}}</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <p style="margin-bottom: 0px;"><strong>Developed By:</strong> Harshit Gupta </p>
+</div>
